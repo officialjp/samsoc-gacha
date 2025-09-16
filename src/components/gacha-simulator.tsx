@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { bgvideo } from "../videos/fivestar.mp4"
+import bgvideo from "../videos/fivestar.mp4"
 
 interface Rewards {
     id: number,
@@ -98,7 +98,7 @@ export default function GachaSim() {
                     {isWishing && (
                         <div>
                             <video muted className="bg-vid">
-                                <source src="videos/fivestar.mp4" type="video/mp4"/>
+                                <source src={bgvideo} type="video/mp4"/>
                             </video>
                         </div>
                     )}
