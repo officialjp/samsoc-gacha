@@ -24,19 +24,35 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-Make sure you have [e.g., Python, Node.js, etc.] installed.
+Make sure you have the following installed on your machine:
+* [Node.js](https://nodejs.org/) (which includes **npm**)
+* An alternative package manager like [pnpm](https://pnpm.io/) or [Bun](https://bun.sh/) is optional but supported.
 
 ### Installation
 
-1.  Clone the repo:
+1.  **Clone the repo:**
     ```sh
     git clone [https://github.com/your-username/samsoc-gacha-simulator.git](https://github.com/your-username/samsoc-gacha-simulator.git)
     ```
-2.  Navigate to the project directory:
+2.  **Navigate to the project directory:**
     ```sh
     cd samsoc-gacha-simulator
     ```
-3.  Follow the instructions specific to the project to run it. (e.g., `npm start`, `python main.py`, etc.)
+3.  **Install dependencies using your preferred package manager:**
+    ```sh
+    # Using npm
+    npm install
+
+    # Or using pnpm
+    pnpm install
+
+    # Or using bun
+    bun install
+    ```
+4.  **Run the application:**
+    ```sh
+    npm start
+    ```
 
 ---
 
