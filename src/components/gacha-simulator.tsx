@@ -72,21 +72,21 @@ export default function GachaSim() {
             
             if (Math.random() < 0.065 && pullKeychain)  {
                 const fiveStars = rewards.filter((c) => c.rarity === 5)
-                pulledReward = fiveStars[Math.floor(Math.random() * fiveStars.length)] || fucktheerror
+                pulledReward = fiveStars[Math.floor(Math.random() * fiveStars.length)] ?? fucktheerror
                 pullKeychain = false;
             } else if (Math.random() < 0.51) {
                 const fourStars = rewards.filter((c) => c.rarity === 4)
-                pulledReward = fourStars[Math.floor(Math.random() * fourStars.length)] || fucktheerror
+                pulledReward = fourStars[Math.floor(Math.random() * fourStars.length)] ?? fucktheerror
             } else {
                 const threeStars = rewards.filter((c) => c.rarity === 3)
-                pulledReward = threeStars[Math.floor(Math.random() * threeStars.length)] || fucktheerror
+                pulledReward = threeStars[Math.floor(Math.random() * threeStars.length)] ?? fucktheerror
             }
             newPulls.push(pulledReward)
         }
         let highest = 0;
         for (let i=0; i<count; i++) {
-                if (highest < (newPulls[i]?.id || 0)) {
-                    highest = newPulls[i]?.id || 0;
+                if (highest < (newPulls[i]?.id ?? 0)) {
+                    highest = newPulls[i]?.id ?? 0;
                 }
         }
         setVideoType(highest)
@@ -162,7 +162,7 @@ export default function GachaSim() {
                                     <p className={character.color + " font-bold text-2xl text-center drop-shadow-lg"}>{character.name}</p>
                                 </CardHeader>
                                 <CardContent>
-                                    <Image src={getRewardImage(character.id) || '/placeholder.png'} width={200} height={200} alt="keychain"></Image>
+                                    <Image src={getRewardImage(character.id) ?? '/placeholder.png'} width={200} height={200} alt="keychain"></Image>
                                 </CardContent>
                             </Card>
                             <br></br>
