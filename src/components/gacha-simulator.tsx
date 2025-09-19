@@ -54,7 +54,7 @@ export default function GachaSim() {
     const [isWishing, setIsWishing] = useState(false)
     const [videoType, setVideoType] = useState(0);
 
-    const performGacha = (count: 2) => {
+    const performGacha = (count: 1) => {
         const fucktheerror = {
             id: 3,
             name: "Keychain",
@@ -70,7 +70,7 @@ export default function GachaSim() {
         for (let i=0; i<count; i++) {
             let pulledReward: Rewards
             
-            if (Math.random() < 0.065 && pullKeychain)  {
+            if (Math.random() < 0.125 && pullKeychain)  {
                 const fiveStars = rewards.filter((c) => c.rarity === 5)
                 pulledReward = fiveStars[Math.floor(Math.random() * fiveStars.length)] ?? fucktheerror
                 pullKeychain = false;
@@ -95,7 +95,7 @@ export default function GachaSim() {
         setTimeout(() => {
             setIsWishing(false)
             setShowResults(true)
-        }, 6000)
+        }, 7300)
     }
 
     const closeResults = () => {
@@ -113,7 +113,7 @@ export default function GachaSim() {
                         alt="Picture of banner">
                     </Image>
                     <Button
-                        onClick={() => performGacha(2)}
+                        onClick={() => performGacha(1)}
                         disabled={isWishing}
                         className="absolute bottom-1 right-1 h-12 w-52 bg-amber-50 hover:bg-amber-100 rounded-4xl border-amber-400 border-2"
                         >
