@@ -117,7 +117,7 @@ export default function GachaSim() {
                         disabled={isWishing}
                         className="absolute bottom-1 right-1 h-12 w-52 bg-amber-50 hover:bg-amber-100 rounded-4xl border-amber-400 border-2"
                         >
-                        <div className="text-xs opacity-80 drop-shadow-sm text-black font-bold font-sans">Wish x2<br></br>⭐x2</div>
+                        <div className="text-xs opacity-80 drop-shadow-sm text-black font-bold font-sans">Wish x1<br></br>⭐x1</div>
                     </Button>
                 </div>
             )
