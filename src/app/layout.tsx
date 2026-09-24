@@ -1,12 +1,16 @@
 import "~/styles/globals.css";
 
-import { type Metadata } from "next";
+import { type Metadata, type Viewport } from "next";
 import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "SAMSOC Gacha",
   description: "Simple gacha app for your gacha needs!",
   icons: [{ rel: "icon", url: "/logo.png" }],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#111827",
 };
 
 const geist = Geist({
