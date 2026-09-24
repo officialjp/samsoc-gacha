@@ -13,9 +13,9 @@ interface Reward {
 }
 
 const REWARDS: Reward[] = [
-    { id: 1, name: "Sticker", rarity: 3, color: "text-blue-500", image: "/samsoc_bw_stickers.png" },
-    { id: 2, name: "Coloured Sticker", rarity: 4, color: "text-purple-500", image: "/samsoc_colour_stickers.png" },
-    { id: 3, name: "Keychain", rarity: 5, color: "text-red-500", image: "/samsoc_keychain.png" },
+    { id: 1, name: "Sticker", rarity: 3, color: "text-blue-500", image: "/samsoc_bw_stickers.webp" },
+    { id: 2, name: "Badge", rarity: 4, color: "text-purple-500", image: "/samsoc_badges.webp" },
+    { id: 3, name: "Poster", rarity: 5, color: "text-red-500", image: "/samsoc_posters.webp" },
 ];
 
 const FALLBACK_REWARD = REWARDS[REWARDS.length - 1]!;
@@ -36,11 +36,11 @@ const VIDEO_BY_ID: Record<number, string> = {
 type Phase = "idle" | "wishing" | "results";
 
 const pickReward = (): Reward => {
-    if (Math.random() < 0.125) {
+    if (Math.random() < 0.05) {
         const fiveStars = REWARDS_BY_RARITY.get(5) ?? [];
         return fiveStars[Math.floor(Math.random() * fiveStars.length)] ?? FALLBACK_REWARD;
     }
-    if (Math.random() < 0.51) {
+    if (Math.random() < 0.25) {
         const fourStars = REWARDS_BY_RARITY.get(4) ?? [];
         return fourStars[Math.floor(Math.random() * fourStars.length)] ?? FALLBACK_REWARD;
     }
