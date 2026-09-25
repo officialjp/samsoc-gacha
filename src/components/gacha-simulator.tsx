@@ -36,7 +36,7 @@ const VIDEO_BY_ID: Record<number, string> = {
 type Phase = "idle" | "wishing" | "results";
 
 const pickReward = (): Reward => {
-    if (Math.random() < 0.05) {
+    if (Math.random() < 0.12) {
         const fiveStars = REWARDS_BY_RARITY.get(5) ?? [];
         return fiveStars[Math.floor(Math.random() * fiveStars.length)] ?? FALLBACK_REWARD;
     }
